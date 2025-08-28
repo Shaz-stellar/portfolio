@@ -595,15 +595,15 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .skill-category {
             background: white;
-            padding: 2rem;
-            border-radius: 20px;
+            padding: 2.5rem;
+            border-radius: 25px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             position: relative;
@@ -643,10 +643,10 @@
         .skill-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
-            padding: 0.6rem;
+            margin-bottom: 1.2rem;
+            padding: 0.7rem;
             background: var(--bg-light);
-            border-radius: 10px;
+            border-radius: 12px;
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
@@ -735,13 +735,13 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 3rem;
         }
 
         .project-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -754,13 +754,13 @@
         }
 
         .project-header {
-            height: 200px;
+            height: 220px;
             background: var(--gradient);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 3rem;
+            font-size: 3.5rem;
             position: relative;
             overflow: hidden;
         }
@@ -782,7 +782,7 @@
         }
 
         .project-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
         .project-title {
@@ -1086,10 +1086,6 @@
             .profile-img {
                 max-width: 200px;
                 height: 250px;
-            }
-
-            .skills-grid {
-                gap: 1rem;
             }
 
             .skill-category h3 {
@@ -1530,7 +1526,7 @@
         <div class="education-card">
             <div class="education-header">
                 <div>
-                    <h3 class="education-title Final Year Project Certification - 3rd Position</h3>
+                    <h3 class="education-title">Final Year Project Certification - 3rd Position</h3>
                     <p>NexGenBlock: Online Bus Seat Reservation System using Blockchain and Biometrics. Recognized for
                         innovationand practical</p>
                     <p>web application of secure authentication and decentralized data management.</p>
@@ -1589,6 +1585,7 @@
             <h2 class="section-title">Let's Connect</h2>
             <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Ready to collaborate on exciting projects
                 or discuss opportunities in tech</p>
+
         </div>
     </section>
 
@@ -1824,6 +1821,20 @@
                 .nav-links a.active {
                     color: var(--secondary-color);
                     font-weight: 700;
+                }
+
+                .hero-title {
+                    font-size: 3.5rem;
+                }
+
+                .hero-subtitle {
+                    font-size: 1.2rem;
+                    padding: 0 1.5rem;
+                }
+
+                .cta-button {
+                    padding: 1.1rem 2.5rem;
+                    font-size: 1.05rem;
                 }
             }
 

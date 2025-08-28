@@ -126,7 +126,7 @@
             transform: scale(1.05);
         }
 
-        /* Keep navbar styles as you had */
+        /* Navbar Styles */
         .navbar {
             position: fixed;
             top: 0;
@@ -548,6 +548,8 @@
         .about-image {
             position: relative;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
 
         .profile-img {
@@ -556,9 +558,15 @@
             height: 420px;
             border-radius: 25px;
             object-fit: cover;
-            display: flex;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
             transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
         }
 
         .about-image:hover .profile-img {
@@ -587,15 +595,15 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
 
         .skill-category {
             background: white;
-            padding: 2.5rem;
-            border-radius: 25px;
+            padding: 2rem;
+            border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             position: relative;
@@ -635,10 +643,10 @@
         .skill-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1.2rem;
-            padding: 0.7rem;
+            margin-bottom: 1rem;
+            padding: 0.6rem;
             background: var(--bg-light);
-            border-radius: 12px;
+            border-radius: 10px;
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
@@ -727,13 +735,13 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .project-card {
             background: white;
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -746,13 +754,13 @@
         }
 
         .project-header {
-            height: 220px;
+            height: 200px;
             background: var(--gradient);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 3.5rem;
+            font-size: 3rem;
             position: relative;
             overflow: hidden;
         }
@@ -774,7 +782,7 @@
         }
 
         .project-content {
-            padding: 2.5rem;
+            padding: 2rem;
         }
 
         .project-title {
@@ -841,7 +849,6 @@
 
         /* Contact Section */
         .contact {
-
             background: var(--text-dark);
             color: white;
             text-align: center;
@@ -976,20 +983,69 @@
             }
 
             .hero-title {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
 
             .hero-subtitle {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 2rem;
+            }
+
+            .about-image {
+                margin: 0 auto;
+            }
+
+            .profile-img {
+                max-width: 250px;
+                height: 300px;
+                margin: 0 auto;
             }
 
             .section {
-                padding: 4rem 1.5rem;
+                padding: 4rem 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .skill-category {
+                padding: 1.5rem;
+            }
+
+            .skill-item {
+                padding: 0.5rem;
+                font-size: 0.95rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .project-card {
+                max-width: 100%;
+            }
+
+            .project-header {
+                height: 180px;
+                font-size: 2.5rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
             }
 
             .timeline::before {
@@ -1015,6 +1071,46 @@
 
             .social-links {
                 gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .profile-img {
+                max-width: 200px;
+                height: 250px;
+            }
+
+            .skills-grid {
+                gap: 1rem;
+            }
+
+            .skill-category h3 {
+                font-size: 1.4rem;
+            }
+
+            .skill-item {
+                font-size: 0.9rem;
+            }
+
+            .project-header {
+                height: 160px;
+                font-size: 2rem;
+            }
+
+            .project-title {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -1077,7 +1173,7 @@
         <div class="about-content">
             <div class="about-image">
                 <div class="profile-img">
-                    <img src="logo.png" alt="Logo">
+                    <img src="logo.png" alt="Profile Image">
                 </div>
             </div>
             <div class="about-text">
@@ -1434,7 +1530,7 @@
         <div class="education-card">
             <div class="education-header">
                 <div>
-                    <h3 class="education-title">Final Year Project Certification - 3rd Position</h3>
+                    <h3 class="education-title Final Year Project Certification - 3rd Position</h3>
                     <p>NexGenBlock: Online Bus Seat Reservation System using Blockchain and Biometrics. Recognized for
                         innovationand practical</p>
                     <p>web application of secure authentication and decentralized data management.</p>
@@ -1493,24 +1589,6 @@
             <h2 class="section-title">Let's Connect</h2>
             <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Ready to collaborate on exciting projects
                 or discuss opportunities in tech</p>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <h4>Phone</h4>
-                    <a href="tel:+923132004893">+92 313 2004893</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h4>Email</h4>
-                    <a href="mailto:shahzerraajpoot561@gmail.com">shahzerraajpoot561@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/noor-shezar-2b2a142b8" target="_blank">Connect with me</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1747,20 +1825,6 @@
                     color: var(--secondary-color);
                     font-weight: 700;
                 }
-
-                .hero-title {
-                    font-size: 3.5rem;
-                }
-
-                .hero-subtitle {
-                    font-size: 1.2rem;
-                    padding: 0 1.5rem;
-                }
-
-                .cta-button {
-                    padding: 1.1rem 2.5rem;
-                    font-size: 1.05rem;
-                }
             }
 
             .cursor {
@@ -1804,6 +1868,5 @@
         });
     </script>
 </body>
-
 
 </html>
